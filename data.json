@@ -1,0 +1,49 @@
+[{
+    "name": "Alex Russo",
+    "username": "AlexRusso",
+    "imageURL": "images/AlexRusso.png",
+    "doILike": false,
+    "likes": 6,
+    "replies": [],
+    "comment": "Lorem ipsum dolor sit amet, vestibulum pellentesque numquam risus maxime dictum, nunc arcu malesuada nihil vel rutrum harum, sed vivamus nunc elit facilisi, eu at ac nec, wisi ante ut per metus arcu."
+}, {
+    "name": "Robert Andrews",
+    "username": "RobertP92",
+    "imageURL": "images/RobertP92.png",
+    "likes": 5,
+    "doILike": true,
+    "replies": [{
+        "name": "Diao Chan",
+        "username": "DiaoChan",
+        "imageURL": "images/DiaoChan.png",
+        "likes": 11,
+        "replies": [],
+        "doILike": false,
+        "comment": "Fermentum morbi distinctio ipsum per. Malesuada sollicitudin eros pellentesque, bibendum ut dolor ipsum ac."
+    }],
+    "comment": "Justo nisl rutrum mus a in, aut et pellentesque et pulvinar taciti morbi, donec leo mauris."
+}, {
+    "name": "Stephen Pat",
+    "username": "StephenP",
+    "imageURL": "images/StephenP.png",
+    "likes": 0,
+    "doILike": false,
+    "comment": "Lorem eu ut vitae, risus porttitor feugiat turpis, id mauris dictumst tempor omnis dignissim a, nonummy ipsum dolor platea consequat, tortor vehicula ut.",
+    "replies": [{
+        "name": "Diao Chan",
+        "username": "DiaoChan",
+        "imageURL": "images/DiaoChan.png",
+        "likes": 51,
+        "replies": [],
+        "doILike": true,
+        "comment": "Quis a massa mattis explicabo, sagittis taciti et. Id metus lobortis, adipiscing ut a faucibus, rutrum et, ultricies nulla purus purus. Vivamus tellus."
+    }, {
+        "name": "Alex Russo",
+        "username": "AlexRusso",
+        "imageURL": "images/AlexRusso.png",
+        "likes": 2,
+        "replies": [],
+        "doILike": false,
+        "comment": "Pellentesque ante lacus a, sed metus rhoncus erat, laoreet sit dolor tempus nec lectus."
+    }]
+}]

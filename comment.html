@@ -1,0 +1,18 @@
+<div ng-class="{'new-comment':commentDirectiveVm.commentObj.isNewComment}">
+    <img ng-src="{{commentDirectiveVm.commentObj.imageURL}}">
+    <span class="commenter-name">{{commentDirectiveVm.commentObj.name}}</span>
+    <p ng-class="{'busy':commentDirectiveVm.isSavingAfterEdit}" ng-if="!commentDirectiveVm.editMode" class="comment-text">{{commentDirectiveVm.commentObj.comment}}</p>
+    <textarea ng-trim="false" auto-height ng-if="commentDirectiveVm.editMode" class="reply-box" type="text" ng-keydown="commentDirectiveVm.saveEditedComment($event)" ng-model="commentDirectiveVm.editedComment" placeholder="Reply..."></textarea>
+    <a ng-class="{'busy':commentDirectiveVm.isLiking}" ng-click="commentDirectiveVm.likeButtonClick()" class="action-button">{{(commentDirectiveVm.commentObj.likes>0)?'('+commentDirectiveVm.commentObj.likes+') ':''}}{{commentDirectiveVm.commentObj.doILike?'Unlike':'Like'}}</a>
+    <span class="action-bullet">&bull;</span>
+    <a class="action-button" ng-click="commentDirectiveVm.replyClick()">{{(commentDirectiveVm.commentObj.replies.length)?'('+commentDirectiveVm.commentObj.replies.length+') ':''}}{{commentDirectiveVm.showReply?'Cancel':'Reply'}}</a>
+    <span ng-if="::commentDirectiveVm.commentObj.username==$root.currentUser">
+    	<span class="action-bullet">&bull;</span>
+    <a class="action-button" ng-click="commentDirectiveVm.editComment()">{{(commentDirectiveVm.editMode)?'Cancel':'Edit'}}</a>
+    <span class="action-bullet">&bull;</span>
+    <a class="action-button" ng-class="{'busy':commentDirectiveVm.isDeleting}" ng-click="commentDirectiveVm.deleteComment()">Delete</a>
+    </span>
+    <div class="separator"></div>
+    <textarea ng-trim="false" auto-height ng-if="commentDirectiveVm.showReply" class="reply-box" type="text" ng-keydown="commentDirectiveVm.addReply($event)" ng-model="commentDirectiveVm.newReply" placeholder="Reply..."></textarea>
+    <comment value="replyObj" owner-array="commentDirectiveVm.commentObj.replies" ng-repeat="replyObj in commentDirectiveVm.commentObj.replies"></comment>
+</div>

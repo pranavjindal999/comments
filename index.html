@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Comments</title>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="libs/angular.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="comment.js"></script>
+    <script type="text/javascript" src="autoHeight.js"></script>
+    <script type="text/javascript" src="commentService.js"></script>
+</head>
+
+<body class="container" ng-app="comments">
+    <div ng-controller="commentsController as commentsVm" class="comments-container">
+    	<textarea auto-height class="comment-box" ng-trim="false" type="text" ng-keydown="commentsVm.addComment($event)" ng-model="commentsVm.newComment" placeholder="Write a Comment..."></textarea>
+    	<comment value="commentObj" owner-array="commentsVm.comments" ng-repeat="commentObj in commentsVm.comments"></comment>
+    </div>
+</body>
+
+</html>
